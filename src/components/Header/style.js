@@ -31,5 +31,6 @@ export const NavHeader = styled.div`
         margin-right: 16px;
         max-width: 100%;
         height: 32px;
+        object-fit: cover;
     }
 `
