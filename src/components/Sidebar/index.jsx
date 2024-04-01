@@ -1,7 +1,7 @@
 'use client'
-import { React, useState } from 'react';
+import React, { useState } from 'react';
 import { Container, Content} from './style';
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes, FaBars } from 'react-icons/fa';
 import SidebarItem from '../SidebarItem';
 
 export default function Sidebar({active}) {
@@ -13,8 +13,8 @@ export default function Sidebar({active}) {
         <Container sidebar={active}>
             <FaTimes onClick={fecharSidebar} />
             <Content>
-                <SidebarItem text={'TESTE'} />
-                <SidebarItem text={'AAAAAAAAAAAA'} />
+                <SidebarItem text={'TESTE'} Icon={<FaBars />} />
+                <SidebarItem text={'AAAAAAA'} Icon={<FaTimes />} />
             </Content>
         </Container>
     )
