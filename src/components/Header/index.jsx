@@ -1,6 +1,6 @@
 'use client'
 import { React, useState } from 'react';
-import { Container, NavHeader } from './style';
+import { Container, NavHeader, ContentContainer } from './style';
 import { FaBars } from "react-icons/fa";
 import Sidebar from '../Sidebar';
 
@@ -11,9 +11,12 @@ export default function Header() {
     return (
         <Container>
                 <NavHeader>
-                    <FaBars onClick={showSideBar} />
-                    <h2>logo</h2>
-                    <img src='iconemack.png' />
+                    <ContentContainer>
+                        <FaBars onClick={showSideBar} />
+                        <div className='titulo'>
+                            <h2>texto principal</h2>
+                        </div>
+                    </ContentContainer>
                     {siderBar && <Sidebar active={setSideBar} />}
                 </NavHeader>
         </Container>
