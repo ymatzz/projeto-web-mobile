@@ -4,16 +4,17 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     align-items: center;
-    background-color: #172B4D;
+    background-color: #2E8B57;
     font-size: 20px;
     color: white;
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
     margin: 0 15px 20px;
+    
 
     > svg {
-        margin: 0 20px;
+        margin: 0 20px 0 10px;
     }
 
     &:hover {

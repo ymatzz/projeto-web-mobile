@@ -14,7 +14,7 @@ export default function Home() {
       </aside>
       <section>
         <main>
-          <Card height='172px'/>
+          <Card height='172px' />
           <Card height='172px' />
           <Card height='172px'  />
         </main>

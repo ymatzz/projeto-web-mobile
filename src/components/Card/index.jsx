@@ -7,7 +7,7 @@ export default function Card({height}) {
     return (
         <Container>
             <ContentContainer height={height}>
-                <h2>IMG/TEXT</h2>
+                <span>IMG/TEXT</span>
             </ContentContainer>
         </Container>
     )

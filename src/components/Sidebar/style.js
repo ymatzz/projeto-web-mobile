@@ -2,7 +2,7 @@
 import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
-    background-color: gray;
+    background-color: #00FF7F;
     position: fixed;
     height: 100%;
     top: 0px;

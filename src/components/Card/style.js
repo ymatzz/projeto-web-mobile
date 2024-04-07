@@ -14,7 +14,7 @@ export const ContentContainer = styled.div`
     align-items: center;
     background-color: #00ff7f;
     border-radius: 10%;
-    h2{
+    span{
             font-family:'Poppins', sans-serif;
             font-size: 12px;
             color: white;
