@@ -11,6 +11,7 @@ export const Container = styled.div`
 export const TextContainer = styled.div`
     width: 100%;
     height: 20%;
+    margin-top: 12px;
     background-color: white;
     display: flex;
     flex-direction: column;
