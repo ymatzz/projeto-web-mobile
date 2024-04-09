@@ -25,7 +25,9 @@ export default function Sidebar({active}) {
                     <SidebarItem text={'CURIOSIDADES'} Icon={<FaQuestion />} />
                 </Link>
                 <SidebarItem text={'QUIZ'} Icon={<FaGamepad />} />
-                <SidebarItem text={'MACKENZIE'} Icon={<AiOutlineMedium  />} />
+                <Link href="/ajuda" style={{"text-decoration": "none"}}>
+                    <SidebarItem text={'AJUDA'} Icon={<AiOutlineMedium  />} />
+                </Link>
             </Content>
         </Container>
     )

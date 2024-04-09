@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <header>
-        <Header />
+        <Header text="Homepage" />
       </header>
       <aside>
         <Card height='70px' />

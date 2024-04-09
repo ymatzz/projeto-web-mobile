@@ -4,7 +4,7 @@ import { Container, NavHeader, ContentContainer } from './style';
 import { FaBars } from "react-icons/fa";
 import Sidebar from '../Sidebar';
 
-export default function Header() {
+export default function Header({text}) {
     const [siderBar, setSideBar] = useState(false);
     const showSideBar = () => setSideBar(!siderBar);
 
@@ -14,7 +14,7 @@ export default function Header() {
                     <ContentContainer>
                         <FaBars onClick={showSideBar} />
                         <div className='titulo'>
-                            <h2>texto principal</h2>
+                            <h2>{text}</h2>
                         </div>
                     </ContentContainer>
                     {siderBar && <Sidebar active={setSideBar} />}
