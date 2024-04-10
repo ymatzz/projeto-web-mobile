@@ -12,7 +12,7 @@ export const ContentContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00ff7f;
+    background-color: #C60000;
     border-radius: 10%;
     span{
             font-family:'Poppins', sans-serif;

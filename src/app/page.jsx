@@ -1,30 +1,25 @@
 'use client'
-import Image from "next/image";
+import React from 'react';
 import Header from "../components/Header";
 import Card from "../components/Card";
+import Carroussel from '@/components/Carroussel';
 
 export default function Home() {
+  const images = [
+    "bomba.jpg",
+    "breakingbad.jpg",
+    "trembo.jpg",
+  ]
+
   return (
     <>
       <header>
         <Header text="Homepage" />
       </header>
-      <aside>
-        <Card height='70px' />
-      </aside>
       <section>
         <main>
-          <Card height='172px' />
-          <Card height='172px' />
-          <Card height='172px'  />
+          <Carroussel images={images} slideWidth="50%" slideHeight="300px" />
         </main>
-      </section>
-      <section>
-        <article>
-          <Card height='172px' />
-          <Card height='172px'  />
-          <Card height='172px'  />
-        </article>
       </section>
     </>
   );

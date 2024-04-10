@@ -13,11 +13,8 @@ export const NavHeader = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: start;
-    background-color: #00ff7f;
+    background-color: #C60000;
     padding: 8px;
-    box-shadow: 0 0 20px 3px;
-
-
 
     img{
         background-color: #00ff7f;

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
+:root{
+    --cor-primaria: #C60000;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -19,9 +23,8 @@ aside{
 }
 
 main{
-    margin-top: 15%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
 }
 
