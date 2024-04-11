@@ -11,7 +11,7 @@ export const Container = styled.div`
     box-shadow: 0 0 20px 3px;
     left: ${props => props.sidebar ? '0' : '-100%'};
     animation: showSideBar .4s;
-
+    z-index: 1000;
     > svg {
         color: white;
         width: 30px;
