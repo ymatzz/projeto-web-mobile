@@ -20,17 +20,16 @@ export const ContentContainer = styled.div`
 `
 
 export const Text = styled.div`
-    width: 90%;
+    width: 80%;
     height: 200px;
-    background-color: red;
     border-radius: 5%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     span{
-        font-size: 60px;
+        font-size: 20px;
         font-family: 'Poppins', sans-serif;
-        color: white;
+        color: black;
     }
 `
 

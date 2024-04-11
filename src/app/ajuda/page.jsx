@@ -1,31 +1,23 @@
 'use client'
 import Header from "../../components/Header";
-import { Container, TextContainer, IconesContainer, SpanContainer, SubTitleContainer, CardContainer } from "./style";
-import Card from "@/components/Card";
-import { FaHeart } from "react-icons/fa6";
-import { RiMessage2Line } from "react-icons/ri";
+import { Container, ContentContainer, TextContainer, IconesContainer, SpanContainer, SubTitleContainer, CardContainer } from "./style";
 
 export default function Ajuda() {
     return (
         <Container>
             <Header text="Sobre" />
-            <TextContainer>
-                <IconesContainer>
-                    <RiMessage2Line />
-                    <FaHeart />
-                </IconesContainer>
-                <SpanContainer>
-                    <span> Mussum Ipsum, cacilds vidis litro abertis. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Quem num gosta di mim que vai caçá sua turmis! </span>
-                </SpanContainer>
-            </TextContainer>
-            <SubTitleContainer>
-                <h2>Como ajudar</h2>
-            </SubTitleContainer>
-            <CardContainer>
-                <Card height="150px" />
-                <Card height="150px" />
-                <Card height="150px" />
-            </CardContainer>
+            <ContentContainer>
+                <TextContainer>
+                    <h2>Os primeiros passos para sair do vício</h2>
+                    <span>Se você está pronto para parar de usar drogas, então você está no caminho certo para obter ajuda. Neste artigo, vamos dar alguns passos importantes para ajudá-lo a parar de usar drogas.</span>
+                    <span>Evitar ambientes que ajudem a recaída</span>
+                    <span>Se expressar com amigos e família</span>
+                    <span>Buscar por um grupo de apoio</span>
+                    <span>Seguir as recomendações médicas</span>
+                    <span>Buscar por ajuda especializada</span>
+                </TextContainer>
+            </ContentContainer>
+
         </Container>
     )
 }

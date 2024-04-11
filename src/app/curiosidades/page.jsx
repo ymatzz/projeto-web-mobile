@@ -1,4 +1,5 @@
 'use client'
+import React from "react";
 import Header from "../../components/Header";
 import { Container, ContentContainer, Text, CardContainer, ImageContainer } from "./style";
 import Card from "@/components/Card";
@@ -6,20 +7,11 @@ import Card from "@/components/Card";
 export default function Curiosidades() {
     return (
         <Container>
-            <Header text="Curiosidades" />
-            <h2> Curiosidades </h2>
+            <Header text="Informações" />
             <ContentContainer>
                 <Text>
-                    <span> texto </span>
-                </Text>
-                <CardContainer>
-                    <Card height='100px' />
-                    <Card height='100px' />
-                    <Card height='100px' />
-                </CardContainer>
-                <ImageContainer>
-                    <span>IMG</span>
-                </ImageContainer>
+                    <span> Mussum Ipsum, cacilds vidis litro abertis. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Quem num gosta di mim que vai caçá sua turmis! </span>
+                </Text> 
             </ContentContainer>
         </Container>
     )

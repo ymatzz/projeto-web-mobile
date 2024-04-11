@@ -3,19 +3,41 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
-    height: 100vh;
-    background-image: url("/teste.jpg");
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+`
+
+export const ContentContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    background-image: url("/ajuda_fundo.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
 `
 
 export const TextContainer = styled.div`
-    width: 100%;
-    height: 20%;
-    margin-top: 12px;
-    background-color: white;
+    width: 80%;
+    margin-top: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    h2{
+        font-size: 28px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        color: white;
+    }
+    span{
+        margin-top: 5%;
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        font-weight: 400;
+    }
 `
 
 export const IconesContainer = styled.div`

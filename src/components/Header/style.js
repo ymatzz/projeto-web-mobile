@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const NavHeader = styled.div`
     width: 100%;
-    height: 300px;
+    height: 255px;
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -17,17 +17,18 @@ export const NavHeader = styled.div`
     padding: 8px;
 
     img{
-        background-color: #00ff7f;
         background-size: cover;
-        margin-right: 16px;
         max-width: 100%;
-        height: 32px;
+        height: 137px;
         object-fit: cover;
+        margin-bottom: -30.5px;
+        padding-left: -60px;
     }
 
     .titulo{
         display: flex;
         justify-content: flex-end;
+        align-items: end;
         h2{
             font-family:'Poppins', sans-serif;
             font-size: 40px;
@@ -41,7 +42,7 @@ export const ContentContainer = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 40%;
+    gap: 35%;
     > svg {
         color: white;
         width: 30px;

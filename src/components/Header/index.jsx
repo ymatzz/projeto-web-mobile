@@ -15,6 +15,7 @@ export default function Header({text}) {
                         <FaBars onClick={showSideBar} />
                         <div className='titulo'>
                             <h2>{text}</h2>
+                            <img src="corpo.png" />
                         </div>
                     </ContentContainer>
                     {siderBar && <Sidebar active={setSideBar} />}
