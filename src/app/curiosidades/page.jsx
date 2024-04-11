@@ -6,7 +6,7 @@ import Card from "@/components/Card";
 
 export default function Curiosidades() {
     return (
-        <Container>
+        <Container className="corpoPadrao">
             <Header text="Informações" />
             <ContentContainer>
                 <Text>

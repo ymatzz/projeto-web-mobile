@@ -4,7 +4,7 @@ import { Container, ContentContainer, TextContainer, IconesContainer, SpanContai
 
 export default function Ajuda() {
     return (
-        <Container>
+        <Container className="corpoPadrao">
             <Header text="Sobre" />
             <ContentContainer>
                 <TextContainer>

@@ -7,7 +7,7 @@ import { MdOutlineLaptopMac } from "react-icons/md";
 import { AiOutlineMedium, AiOutlineSearch } from "react-icons/ai";
 import SidebarItem from '../SidebarItem';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { LuHeartHandshake } from "react-icons/lu";
 
 export default function Sidebar({active}) {
     const fecharSidebar = () => {
@@ -22,13 +22,13 @@ export default function Sidebar({active}) {
                     <SidebarItem text={'HOME'} Icon={<TiHome />} />
                 </Link>   
                 <Link href="/curiosidades" style={{"text-decoration": "none"}}>
-                    <SidebarItem text={'CURIOSIDADES'} Icon={<FaQuestion />} />
+                    <SidebarItem text={'INFORMAÇÕES'} Icon={<FaQuestion />} />
                 </Link>
                 <Link href="/quiz" style={{"text-decoration": "none"}}>
                     <SidebarItem text={'QUIZ'} Icon={<FaGamepad />} />
                 </Link>
                 <Link href="/ajuda" style={{"text-decoration": "none"}}>
-                    <SidebarItem text={'AJUDA'} Icon={<AiOutlineMedium  />} />
+                    <SidebarItem text={'AJUDA'} Icon={<LuHeartHandshake   />} />
                 </Link>
             </Content>
         </Container>

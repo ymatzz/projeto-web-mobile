@@ -24,7 +24,7 @@ export default function Carroussel({ images, slideWidth, slideHeight }) {
     };
 
     return (
-        <Slider {...settings} style={{ width: slideWidth, height: slideHeight, marginTop: "100px", borderRadius: "10px" }}>
+        <Slider {...settings} style={{ width: slideWidth, height: slideHeight, borderRadius: "10px" }}>
             {images.map((image, index) => (
                 <div key={index}>
                     <img src={image} alt={`Slide ${index}`} />

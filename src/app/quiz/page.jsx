@@ -6,7 +6,7 @@ import Card from "@/components/Card";
 
 export default function Quiz() {
     return (
-        <Container>
+        <Container className="corpoPadrao">
             <Header text="Quiz" />
             <TextContainer>
                 <span>Mussum Ipsum, cacilds vidis litro abertis. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Quem num gosta di mim que vai caçá sua turmis!</span>
