@@ -10,8 +10,16 @@ export const CarrosselContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/pulmao.png");
+    background-image: url("/pulmao.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+`
+
+export const ContentCarrosselContainer = styled.div`
+    width: 100%;
+    max-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `

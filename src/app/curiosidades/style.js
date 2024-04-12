@@ -2,30 +2,23 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    h2{
-        margin-top: 12px;
-        margin-left: 12px;
-        font-size: 32px;
-    }
 `
 
 export const ContentContainer = styled.div`
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin-top: 30px;
+    gap: 30px;
 `
 
 export const Text = styled.div`
     width: 80%;
-    height: 200px;
-    border-radius: 5%;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     span{
+        text-align: justify;
         font-size: 20px;
         font-family: 'Poppins', sans-serif;
         color: black;
