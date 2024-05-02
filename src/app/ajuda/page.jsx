@@ -5,7 +5,6 @@ import { Container, ContentContainer, TextContainer, IconesContainer, SpanContai
 export default function Ajuda() {
     return (
         <Container className="corpoPadrao">
-            <Header text="Sobre" />
             <ContentContainer>
                 <TextContainer>
                     <h2>Os primeiros passos para sair do vício</h2>

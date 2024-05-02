@@ -7,7 +7,6 @@ import Card from "@/components/Card";
 export default function Curiosidades() {
     return (
         <Container className="corpoPadrao">
-            <Header text="Informações" />
             <ContentContainer>
             <Text>
                 <span> O efeito das drogas e do álcool no corpo humano a longo prazo é profundamente prejudicial e pode causar danos irreversíveis em diversos sistemas do organismo. Tanto as drogas ilícitas quanto o álcool têm impactos negativos que se acumulam ao longo do tempo, afetando a saúde física, mental e emocional dos usuários.

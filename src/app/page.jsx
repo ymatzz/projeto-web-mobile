@@ -14,7 +14,6 @@ export default function Home() {
 
   return (
     <Container className='corpoPadrao'>
-        <Header text="Homepage" />
         <CarrosselContainer>
             <Carroussel images={images} slideWidth="73%" slideHeight="50%" />
         </CarrosselContainer>

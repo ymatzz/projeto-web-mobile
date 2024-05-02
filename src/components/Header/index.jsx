@@ -4,7 +4,7 @@ import { Container, NavHeader, ContentContainer } from './style';
 import { FaBars } from "react-icons/fa";
 import Sidebar from '../Sidebar';
 
-export default function Header({text}) {
+export default function Header() {
     const [siderBar, setSideBar] = useState(false);
     const showSideBar = () => setSideBar(!siderBar);
 
@@ -12,9 +12,9 @@ export default function Header({text}) {
         <Container>
                 <NavHeader>
                     <ContentContainer>
-                        <FaBars onClick={showSideBar} />
+                        <FaBars onClick={showSideBar} className='icon' />
                         <div className='titulo'>
-                            <h2>{text}</h2>
+                            <h2>nome do site</h2>
                             <img src="corpo.png" />
                         </div>
                     </ContentContainer>
