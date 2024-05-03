@@ -2,7 +2,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    min-height: 25%;
+    min-height: 120px;
+    background-color: #C60000;
     @media screen and (min-width: 600px){
         min-height: 120px;
     }
@@ -15,10 +16,13 @@ export const NavHeader = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: start;
-    background-color: #C60000;
-    padding: 8px;
+    justify-content: space-around;
+    align-items: center;
+    @media screen and (min-width: 600px){
+        align-items: start;
+        padding: 8px;
+        justify-content: space-between;
+    }
 `
 
 export const ContentContainer = styled.div`
