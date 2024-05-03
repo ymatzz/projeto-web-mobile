@@ -1,13 +1,18 @@
 'use client'
 import { React, useState } from 'react';
-import { Container, ContentContainer } from './style';
+import { Container, ContentContainer, Tittle, Text } from './style';
 
-export default function Card({height}) {
+export default function Card({titulo, texto}) {
 
     return (
         <Container>
-            <ContentContainer height={height}>
-                <span>IMG/TEXT</span>
+            <ContentContainer>
+                <Tittle>
+                    <h2>{titulo}</h2>
+                </Tittle>
+                <Text>
+                    <span>{texto}</span>
+                </Text>
             </ContentContainer>
         </Container>
     )
