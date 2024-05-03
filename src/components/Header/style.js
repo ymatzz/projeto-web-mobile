@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     min-height: 25%;
     @media screen and (min-width: 600px){
-        min-height: 15%;
+        min-height: 120px;
     }
     width: 100%;
     display: flex;
@@ -28,7 +28,7 @@ export const ContentContainer = styled.div`
     flex-direction: column;
     gap: 35%;
     @media screen and (min-width: 600px){
-        gap: 0;
+        gap: 10px;
     }
     .icon {
         color: white;
@@ -48,7 +48,8 @@ export const ContentContainer = styled.div`
         object-fit: cover;
         margin-bottom: -30.5px;
         @media screen and (min-width: 600px){
-            height: 120px;
+            height: 100px;
+            margin-top: -20px;
         }
     }
 
@@ -56,7 +57,7 @@ export const ContentContainer = styled.div`
         display: flex;
         @media screen and (min-width: 600px){
             justify-content: center;
-            align-items: center;
+            align-items: start;
         }
         justify-content: flex-end;
         align-items: end;

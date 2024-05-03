@@ -23,6 +23,9 @@ export const Text = styled.div`
         font-family: 'Poppins', sans-serif;
         color: black;
     }
+    .textoNegrito{
+        font-weight: bold;
+    }
 `
 
 export const CardContainer = styled.div`

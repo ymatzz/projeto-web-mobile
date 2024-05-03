@@ -14,6 +14,9 @@ export const CarrosselContainer = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    @media screen and (min-width: 600px){
+        background-size: contain;
+    }
 `
 
 export const ContentCarrosselContainer = styled.div`
