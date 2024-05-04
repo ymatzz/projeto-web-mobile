@@ -1,7 +1,7 @@
 'use client'
-import React from 'react';
+import React, {useState} from 'react';
 import Card from '../components/Card'; // Importe o componente Card
-import { Container, CarrosselContainer, ContentCarrosselContainer } from './style';
+import { Container, CarrosselContainer, ContentCarrosselContainer, Button } from './style';
 
 export default function Home() {
   const cards = [
@@ -19,19 +19,26 @@ export default function Home() {
     }
   ];
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === cards.length - 1 ? 0 : prevIndex + 1));
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? cards.length - 1 : prevIndex - 1));
   };
 
   return (
     <Container className="corpoPadrao">
       <CarrosselContainer>
         <ContentCarrosselContainer>
+          <Card titulo={cards[currentIndex].titulo} texto={cards[currentIndex].texto} />
         </ContentCarrosselContainer>
+        <div>
+          <Button onClick={handlePrev}>Anterior</Button>
+          <Button onClick={handleNext}>Próximo</Button>
+        </div>
       </CarrosselContainer>
     </Container>
   );

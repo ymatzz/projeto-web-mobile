@@ -25,3 +25,20 @@ export const ContentCarrosselContainer = styled.div`
     justify-content: center;
     align-items: center;
 `
+
+export const Button = styled.button`
+  /* Estilos para o botão */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff; /* Cor de fundo do botão (azul) */
+  color: #fff; /* Cor do texto (branco) */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px; /* Margem à direita para separar os botões */
+  transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+
+  &:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+  }
+`;
