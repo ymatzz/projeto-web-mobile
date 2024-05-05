@@ -1,7 +1,8 @@
 'use client'
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from '../components/Card'; // Importe o componente Card
-import { Container, CarrosselContainer, ContentCarrosselContainer, Button } from './style';
+import { Container, CarrosselContainer, ContentCarrosselContainer, Slide } from './style';
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
   const cards = [
@@ -19,26 +20,40 @@ export default function Home() {
     }
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === cards.length - 1 ? 0 : prevIndex + 1));
+  const nextSlide = () => {
+    setCurrentSlide((currentSlide + 1) % cards.length);
   };
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? cards.length - 1 : prevIndex - 1));
+  const prevSlide = () => {
+    const nextSlideIndex = currentSlide - 1 < 0 ? cards.length - 1 : currentSlide - 1;
+    setCurrentSlide(nextSlideIndex);
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      nextSlide();
+    }, 10000); // Avança para o próximo slide a cada 5 segundos (5000 ms)
+
+    // Limpa o intervalo ao desmontar o componente
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [currentSlide]); // Reexecuta o efeito sempre que o currentSlide mudar
 
   return (
     <Container className="corpoPadrao">
       <CarrosselContainer>
+        <FaArrowLeft onClick={prevSlide} style={{cursor: 'pointer'}} />
         <ContentCarrosselContainer>
-          <Card titulo={cards[currentIndex].titulo} texto={cards[currentIndex].texto} />
+          {cards.map((card, index) => (
+            <Slide key={index} isActive={index === currentSlide}>
+              <Card titulo={card.titulo} texto={card.texto} />
+            </Slide>
+          ))}
         </ContentCarrosselContainer>
-        <div>
-          <Button onClick={handlePrev}>Anterior</Button>
-          <Button onClick={handleNext}>Próximo</Button>
-        </div>
+        <FaArrowRight onClick={nextSlide} style={{cursor: 'pointer'}} />
       </CarrosselContainer>
     </Container>
   );

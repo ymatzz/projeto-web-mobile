@@ -9,14 +9,14 @@ export const Container = styled.div`
 `
 
 export const ContentContainer = styled.div`
-    height: 400px;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 7%;
-    padding: 8px;
+    padding: 12px;
     gap: 10px;
     @media screen and (min-width: 600px){
         max-width: 500px;
