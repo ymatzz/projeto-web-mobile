@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    min-height: 120px;
+    min-height: 80px;
     background-color: #C60000;
     @media screen and (min-width: 600px){
         min-height: 100px;
@@ -22,6 +22,16 @@ export const NavHeader = styled.div`
         align-items: start;
         padding: 8px;
         justify-content: space-between;
+    }
+    .icon{
+        height: 32px;
+        width: 32px;
+        color: black;
+    }
+    .iconAtivo{
+        height: 32px;
+        width: 32px;
+        color: #FFFFFF;
     }
 `
 
@@ -70,6 +80,12 @@ export const ContentContainer = styled.div`
 
     .link{
         text-decoration: none;
+        color: black;
+        font-weight: 400;
+    }
+
+    .link:hover{
+        text-decoration: underline black;
         color: black;
         font-weight: 400;
     }

@@ -30,7 +30,11 @@ export default function Header() {
     }, []);
 
     const isActive = (path) => {
-        return rotaLink == path ? 'linkAtivo' : 'link';
+        if (windowWidth > 600) {
+            return rotaLink == path ? 'linkAtivo' : 'link';
+        } else {
+            return rotaLink == path ? 'iconAtivo' : 'icon';
+        }
     };
 
     return (
@@ -56,16 +60,16 @@ export default function Header() {
                 <Container>
                     <NavHeader>
                         <Link href="/" style={{ "text-decoration": "none" }}>
-                            <SidebarItem text={'HOME'} Icon={<TiHome />} />
+                            <TiHome className={isActive('/')} />
                         </Link>
                         <Link href="/curiosidades" style={{ "text-decoration": "none" }}>
-                            <SidebarItem text={'INFOS'} Icon={<FaQuestion />} />
+                            <FaQuestion className={isActive('/curiosidades')} />
                         </Link>
                         <Link href="/quiz" style={{ "text-decoration": "none" }}>
-                            <SidebarItem text={'QUIZ'} Icon={<FaGamepad />} />
+                            <FaGamepad className={isActive('/quiz')} />
                         </Link>
                         <Link href="/ajuda" style={{ "text-decoration": "none" }}>
-                            <SidebarItem text={'AJUDA'} Icon={<LuHeartHandshake />} />
+                            <LuHeartHandshake className={isActive('/ajuda')} />
                         </Link>
                     </NavHeader>
                 </Container>
