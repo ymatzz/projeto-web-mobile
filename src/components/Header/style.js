@@ -5,7 +5,7 @@ export const Container = styled.div`
     min-height: 120px;
     background-color: #C60000;
     @media screen and (min-width: 600px){
-        min-height: 120px;
+        min-height: 100px;
     }
     width: 100%;
     display: flex;
@@ -29,21 +29,10 @@ export const ContentContainer = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 35%;
+    justify-content: space-between;
+    align-items: end;
     @media screen and (min-width: 600px){
         gap: 10px;
-    }
-    .icon {
-        color: white;
-        @media screen and (min-width: 600px){
-            min-width: 30px;
-            min-height: 30px;
-        }
-        width: 30px;
-        height: 30px;
-        margin-left: 4px;
-        cursor: pointer;
     }
     img{
         background-size: cover;
@@ -70,5 +59,24 @@ export const ContentContainer = styled.div`
             font-size: 40px;
             color: white;
         }
+    }
+    
+    .links{
+        margin-bottom: 10px;
+        display: flex;
+        min-width: 300px;
+        justify-content: space-around;
+    }
+
+    .link{
+        text-decoration: none;
+        color: black;
+        font-weight: 400;
+    }
+
+    .linkAtivo{
+        text-decoration: none;
+        color: black;
+        font-weight: 800;
     }
 `
