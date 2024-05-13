@@ -50,7 +50,7 @@ export default function Header() {
                                 <Link href="/ajuda" className={isActive('/ajuda')}>AJUDA</Link>
                             </div>
                             <div className='titulo'>
-                                <h2>nome do site</h2>
+                                <h2>Fortalecendo a Prevenção</h2>
                                 <img src="corpo.png" />
                             </div>
                         </ContentContainer>

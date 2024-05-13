@@ -6,22 +6,26 @@ export const Container = styled.div`
     background-color: #C60000;
     @media screen and (min-width: 600px){
         min-height: 100px;
+        text-decoration: none;
     }
     width: 100%;
     display: flex;
     justify-content: center;
+    text-decoration: none;
 `
 
 export const NavHeader = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
+    text-decoration: none;
     justify-content: space-around;
     align-items: center;
     @media screen and (min-width: 600px){
         align-items: start;
         padding: 8px;
         justify-content: space-between;
+        text-decoration: none;
     }
     .icon{
         height: 32px;
@@ -76,23 +80,24 @@ export const ContentContainer = styled.div`
         display: flex;
         min-width: 300px;
         justify-content: space-around;
+        text-decoration: none;
     }
 
     .link{
         text-decoration: none;
-        color: black;
+        color: white;
         font-weight: 400;
     }
 
     .link:hover{
-        text-decoration: underline black;
         color: black;
         font-weight: 400;
+        text-decoration: none;
     }
 
     .linkAtivo{
         text-decoration: none;
-        color: black;
+        color: white;
         font-weight: 800;
     }
 `
