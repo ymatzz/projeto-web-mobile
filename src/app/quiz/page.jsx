@@ -3,6 +3,7 @@ import React from "react";
 import Header from "@/components/Header";
 import { Container, TextContainer, ImageContainer, ButtonContainer } from "./style";
 import Card from "@/components/Card";
+import Link from 'next/link';
 
 export default function Quiz() {
     return (
@@ -14,8 +15,11 @@ export default function Quiz() {
                 <img src="quizimg.png" />
             </ImageContainer>
             <ButtonContainer>
-                <button>Iniciar quiz</button>
+                <Link href="/perguntas">
+                    Iniciar quiz
+                </Link>
             </ButtonContainer>
         </Container>
+
     )
 }

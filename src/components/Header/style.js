@@ -30,13 +30,15 @@ export const NavHeader = styled.div`
     .icon{
         height: 32px;
         width: 32px;
-        color: black;
+        color: white;
     }
     .iconAtivo{
         height: 32px;
         width: 32px;
-        color: #FFFFFF;
+        color: black;
     }
+
+    
 `
 
 export const ContentContainer = styled.div`
