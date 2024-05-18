@@ -6,10 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "json": "npx json-server --watch data/db.json --port 8000",
+    "server": "npm-run-all --parallel json dev"
   },
   "dependencies": {
     "@fontsource/open-sans": "^5.0.27",
+    "json-server": "^1.0.0-beta.0",
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18",

@@ -25,18 +25,18 @@ export const ImageContainer = styled.div`
     img{
         width: 100%;
         background-size: fill;
+        border-radius: 10px;
     }
 `
 
 export const ButtonContainer = styled.div`
-    margin-top: 5%;
+    margin-top: 30px;
     display: flex;
+    width: 100%;
     justify-content: center;
-    width: 80%;
-    height: 40px;
     button{
         width: 100%;
-        height: 100%;
+        padding: 16px;
         background-color: #C60000;
         color: #FFFFFF;
         border-radius: 10px;

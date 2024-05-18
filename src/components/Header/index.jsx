@@ -9,6 +9,7 @@ import { TiHome } from "react-icons/ti";
 import { LuHeartHandshake } from "react-icons/lu";
 import { useRouter, usePathname } from 'next/navigation';
 
+
 export default function Header() {
     const [siderBar, setSideBar] = useState(false);
     const showSideBar = () => setSideBar(!siderBar);
@@ -30,10 +31,14 @@ export default function Header() {
     }, []);
 
     const isActive = (path) => {
+        const rota = rotaLink;
+        const isQuizPath = (rota === '/quiz' || rota === '/quiz/perguntas');
+        const targetPath = path === '/quiz' ? isQuizPath : rota === path;
+
         if (windowWidth > 600) {
-            return rotaLink == path ? 'linkAtivo' : 'link';
+            return targetPath ? 'linkAtivo' : 'link';
         } else {
-            return rotaLink == path ? 'iconAtivo' : 'icon';
+            return targetPath ? 'iconAtivo' : 'icon';
         }
     };
 

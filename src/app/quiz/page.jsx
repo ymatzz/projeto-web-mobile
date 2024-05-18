@@ -1,9 +1,8 @@
 'use client'
 import React from "react";
-import Header from "@/components/Header";
 import { Container, TextContainer, ImageContainer, ButtonContainer } from "./style";
-import Card from "@/components/Card";
 import Link from 'next/link';
+
 
 export default function Quiz() {
     return (
@@ -15,11 +14,10 @@ export default function Quiz() {
                 <img src="quizimg.png" />
             </ImageContainer>
             <ButtonContainer>
-                <Link href="/perguntas">
-                    Iniciar quiz
+                <Link style={{textDecoration: "none"}} href="/quiz/perguntas">
+                    <button>Iniciar quiz</button>
                 </Link>
             </ButtonContainer>
         </Container>
-
     )
 }
