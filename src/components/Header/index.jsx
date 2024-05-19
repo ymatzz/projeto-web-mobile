@@ -1,18 +1,15 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { Container, NavHeader, ContentContainer } from './style';
-import Sidebar from '../Sidebar';
-import SidebarItem from '../SidebarItem';
 import Link from 'next/link';
-import { FaTimes, FaBars, FaGamepad, FaQuestion } from 'react-icons/fa';
-import { TiHome } from "react-icons/ti";
 import { LuHeartHandshake } from "react-icons/lu";
 import { useRouter, usePathname } from 'next/navigation';
+import { LiaQuestionSolid } from "react-icons/lia";
+import { BsHouse } from "react-icons/bs";
+import { IoGameControllerOutline } from "react-icons/io5";
 
 
 export default function Header() {
-    const [siderBar, setSideBar] = useState(false);
-    const showSideBar = () => setSideBar(!siderBar);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const rotaLink = usePathname();
 
@@ -23,7 +20,6 @@ export default function Header() {
     useEffect(() => {
         // Adiciona um event listener para o evento de redimensionamento da janela
         window.addEventListener('resize', updateWindowWidth);
-
         // Remove o event listener quando o componente é desmontado
         return () => {
             window.removeEventListener('resize', updateWindowWidth);
@@ -33,8 +29,7 @@ export default function Header() {
     const isActive = (path) => {
         const rota = rotaLink;
         const isQuizPath = (rota === '/quiz' || rota === '/quiz/perguntas');
-        const targetPath = path === '/quiz' ? isQuizPath : rota === path;
-
+        const targetPath = path == '/quiz' ? isQuizPath : rota == path;
         if (windowWidth > 600) {
             return targetPath ? 'linkAtivo' : 'link';
         } else {
@@ -56,7 +51,6 @@ export default function Header() {
                             </div>
                             <div className='titulo'>
                                 <h2>Fortalecendo a Prevenção</h2>
-                                <img src="corpo.png" />
                             </div>
                         </ContentContainer>
                     </NavHeader>
@@ -65,13 +59,13 @@ export default function Header() {
                 <Container>
                     <NavHeader>
                         <Link href="/" style={{ "text-decoration": "none" }}>
-                            <TiHome className={isActive('/')} />
+                            <BsHouse className={isActive('/')} />
                         </Link>
                         <Link href="/curiosidades" style={{ "text-decoration": "none" }}>
-                            <FaQuestion className={isActive('/curiosidades')} />
+                            <LiaQuestionSolid  className={isActive('/curiosidades')} />
                         </Link>
                         <Link href="/quiz" style={{ "text-decoration": "none" }}>
-                            <FaGamepad className={isActive('/quiz')} />
+                            <IoGameControllerOutline className={isActive('/quiz')} />
                         </Link>
                         <Link href="/ajuda" style={{ "text-decoration": "none" }}>
                             <LuHeartHandshake className={isActive('/ajuda')} />

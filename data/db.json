@@ -1,49 +1,47 @@
 {
-    "quiz": [
-      {
-        "id": "1",
-        "pergunta": "pergunta1",
-        "a": "a",
-        "b": "b",
-        "c": "c",
-        "d": "d",
-        "e": "e"
-      },
-      {
-        "id": "2",
-        "pergunta": "pergunta2",
-        "a": "a",
-        "b": "b",
-        "c": "c",
-        "d": "d",
-        "e": "e"
-      },
-      {
-        "id": "3",
-        "pergunta": "pergunta3",
-        "a": "a",
-        "b": "b",
-        "c": "c",
-        "d": "d",
-        "e": "e"
-      },
-      {
-        "id": "4",
-        "pergunta": "pergunta4",
-        "a": "a",
-        "b": "b",
-        "c": "c",
-        "d": "d",
-        "e": "e"
-      },
-      {
-        "id": "5",
-        "pergunta": "pergunta5",
-        "a": "a",
-        "b": "b",
-        "c": "c",
-        "d": "d",
-        "e": "e"
-      }
-    ]
-  }
+  "questoes": [
+{
+"id": 1,
+"question" : "Qual é uma consequência de longo prazo do uso abusivo de álcool?",
+"options" : ["a) Aumento da concentração e da memória" , "b) Redução do risco de doenças cardíacas" ,"c) Danos ao fígado e ao sistema nervoso",
+"d) Melhoria da saúde mental"
+],
+"correctAnswer": "c) Danos ao fígado e ao sistema nervoso"
+},
+{
+  "id": 2,
+  "question" : "Qual é uma estratégia eficaz para lidar com a pressão dos colegas para experimentar drogas ou álcool?",
+  "options": ["a) Ceder à pressão para evitar conflitos",
+  "b) Manter-se firme em seus valores e limites pessoais",
+  "c) Experimentar para não se sentir excluído",
+  "d) Ignorar a situação e esperar que ela passe"],
+"correctAnswer": "b) Manter-se firme em seus valores e limites pessoais"
+},
+{
+"id" : 3,
+"question" : "Quais são os principais objetivos da prevenção universal em relação ao uso de drogas?",
+"options": ["a) Reduzir o acesso a tratamentos para dependentes químicos",
+"b) Identificar e intervir precocemente em fatores de risco antes do uso de substâncias",
+"c) Promover o uso recreativo de substâncias em ambientes controlados",
+"d) Normalizar o consumo de drogas na sociedade"],
+"correctAnswer": "b) Identificar e intervir precocemente em fatores de risco antes do uso de substâncias"
+},
+{
+"id": 4,
+"question": "Qual é uma das estratégias eficazes para promover a resiliência contra o uso de drogas entre os jovens?",
+"options" : ["a) Isolamento dos jovens de situações estressantes","b) Maximize o contato com os pares que usam substâncias",
+"c) Desenvolver habilidades de enfrentamento e autoestima",
+"d) Incentivar o uso de drogas como forma de lidar com o estresse"],
+"correctAnswer": "c) Desenvolver habilidades de enfrentamento e autoestima"
+},
+{
+"id" : 5,
+"question" : "O que é a 'síndrome de abstinência' em relação ao uso de drogas?",
+"options" : ["a) Um conjunto de sintomas físicos e psicológicos que ocorrem quando uma pessoa para de usar uma substância",
+"b) Uma condição em que o corpo desenvolve tolerância à substância consumida",
+"c) Um estado de intoxicação prolongado causado pelo uso excessivo de drogas",
+"d) Um termo médico para a dependência psicológica das drogas"],
+"correctAnswer":"a) Um conjunto de sintomas físicos e psicológicos que ocorrem quando uma pessoa para de usar uma substância"
+}
+]
+}
