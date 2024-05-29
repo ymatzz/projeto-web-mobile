@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import Card from '../components/Card'; // Importe o componente Card
-import { Container, CarrosselContainer, ContentCarrosselContainer, Slide } from './style';
+import { Container, CarrosselContainer, ContentCarrosselContainer, Slide, TextContainer } from './style';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
@@ -41,6 +41,21 @@ export default function Home() {
       clearInterval(intervalId);
     };
   }, [currentSlide]); // Reexecuta o efeito sempre que o currentSlide mudar
+
+  const testeApi = async() => {
+    const url = 'http://tabnet.datasus.gov/cgi/deftohtm.exe?vigitel/vigitel10.def'
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      console.log("aaaaa", data);
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  useEffect(() => {
+    testeApi();
+  }, []);
 
   return (
     <Container className="corpoPadrao">

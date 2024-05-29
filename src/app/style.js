@@ -22,8 +22,8 @@ export const CarrosselContainer = styled.div`
 export const ContentCarrosselContainer = styled.div`
   position: relative;
   width: 90%;
-  min-height: 455px; /* Altura do contêiner do slide */
-  overflow: hidden; /* Esconder conteúdo que transborda */
+  min-height: 455px;
+  overflow: hidden; 
 `;
 
 export const Slide = styled.div`
@@ -32,6 +32,17 @@ export const Slide = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: ${props => (props.isActive ? 1 : 0)}; /* Mostrar apenas o slide ativo */
+  opacity: ${props => (props.isActive ? 1 : 0)};
   transition: opacity 0.5s ease;
 `;
+
+export const TextContainer = styled.div`
+  margin-top: 24px;
+  width: 90%;
+  span{
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+  }
+`
