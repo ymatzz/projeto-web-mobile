@@ -1,10 +1,12 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import Card from '../components/Card'; // Importe o componente Card
-import { Container, CarrosselContainer, ContentCarrosselContainer, Slide, TextContainer } from './style';
+import { Container, CarrosselContainer, ContentCarrosselContainer, Slide, TextContainer, ContentContainer } from './style';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
+  const [conselho, setConselho] = useState(null);
+
   const cards = [
     {
       titulo: 'Você sabe o que são Drogas Depressoras?',
@@ -42,34 +44,45 @@ export default function Home() {
     };
   }, [currentSlide]); // Reexecuta o efeito sempre que o currentSlide mudar
 
-  const testeApi = async() => {
-    const url = 'http://tabnet.datasus.gov/cgi/deftohtm.exe?vigitel/vigitel10.def'
+  const conselhoApi = async () => {
+    const url = 'https://api.adviceslip.com/advice'
     try {
       const response = await fetch(url);
       const data = await response.json();
-      console.log("aaaaa", data);
+      console.log('adsda', data)
+      setConselho(data);
     } catch (e) {
       console.error(e);
     }
   }
 
   useEffect(() => {
-    testeApi();
+    conselhoApi();
   }, []);
 
   return (
     <Container className="corpoPadrao">
-      <CarrosselContainer>
-        <FaArrowLeft onClick={prevSlide} style={{cursor: 'pointer'}} />
-        <ContentCarrosselContainer>
-          {cards.map((card, index) => (
-            <Slide key={index} isActive={index === currentSlide}>
-              <Card titulo={card.titulo} texto={card.texto} />
-            </Slide>
-          ))}
-        </ContentCarrosselContainer>
-        <FaArrowRight onClick={nextSlide} style={{cursor: 'pointer'}} />
-      </CarrosselContainer>
+      <ContentContainer>
+        <TextContainer>
+            <h2>Conselho do dia:</h2>
+            {conselho && conselho.slip ? (
+              <span>{conselho.slip.advice}</span>
+            ) : (
+              <span>Carregando conselho...</span>
+            )}
+        </TextContainer>
+        <CarrosselContainer>
+          <FaArrowLeft onClick={prevSlide} style={{ cursor: 'pointer' }} />
+          <ContentCarrosselContainer>
+            {cards.map((card, index) => (
+              <Slide key={index} isActive={index === currentSlide}>
+                <Card titulo={card.titulo} texto={card.texto} />
+              </Slide>
+            ))}
+          </ContentCarrosselContainer>
+          <FaArrowRight onClick={nextSlide} style={{ cursor: 'pointer' }} />
+        </CarrosselContainer>
+      </ContentContainer>
     </Container>
   );
 }
